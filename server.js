@@ -13,8 +13,9 @@ const io = socketIO(server);
 io.on('connection', (socket) => {
     console.log("user id: ",socket.id)
     //receive from the client
-    socket.on('gotSpeechResult', (data) => {
+    socket.on('crazyMode', (data) => {
         console.log(data);
+        console.log("got data from server")
 
     })
 });
